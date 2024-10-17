@@ -1,0 +1,41 @@
+
+  .custom-header {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0;
+    background-color: white; /* Change this to your header background color */
+    z-index: 1000; /* Ensures the header is above other content */
+    color: #fff;
+
+  }
+  
+  
+  .logo {
+   width:100px;
+ }
+  
+
+  
+  .nav-link {
+    color: #ffffff; /* White text color for links */
+
+  }
+  
+  .nav-link.active {
+    color: #00CFFF; /* Neon Blue active link */
+    position: relative;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff; /* White toggle icon for mobile */
+  }
+  
