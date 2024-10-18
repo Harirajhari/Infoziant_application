@@ -1,184 +1,196 @@
-.section{
-    background-color: #000000;
-    text-align: center;
-    padding: 50px;
+:root {
+  --e-global-color-primary: #1f1f1f; /* Dark Gray */
+  --e-global-color-secondary: #5a2dc9; /* Bright Purple */
+  --e-global-color-text: #d0d0d0; /* Light Gray */
+  --e-global-color-accent: #57eef1; /* Cyan */
+  --e-global-color-white: #ffffff; /* White */
+  --e-global-color-black: #000000; /* Black */
+  --e-global-color-dark-gray: #171717d8; /* Dark Gray */
+  --e-global-color-grayish-blue: #a2abbd; /* Grayish Blue */
+  --e-global-color-light-gray: #dedede; /* Light Gray */
+  --e-global-color-pale-blue: #f1f0ff; /* Pale Blue */
+  --e-global-color-bright-yellow: #fbc729; /* Bright Yellow */
+}
+
+.chooseus_section {
+  padding: 55px 0 55px;
+  background-color: var(--e-global-color-dark-gray); /* Dark Gray Background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgb(0, 0, 0); /* Subtle shadow for depth */
 }
 
 
-.section.sixth-section{
-    /* General styling for the section */
-    .section.sixth-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-left: 0%;
-      padding: 60px;
-    }
-    
-    /* Container for download details */
-    .download-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-      padding: 20px;
-      width: 100%;
-      max-width: 1200px;
-      margin-left: 165px;
-    }
-    
-    .checkmark {
-        color: green; /* Green for checkmarks */
-    }
-    
-    .crossmark {
-        color: red; /* Red for crossmarks */
-    }
-    
-    
-    /* Styling for the download box */
-    .download-box {
-      flex: 2;
-      background-color: #00000082;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 6px rgba(21, 245, 186, 0.8), 0 0 6px rgba(0, 102, 255, 0.8); /* Glowing effect */
-      text-align: center;
-    }
-    
-    .download-box h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: rgba(0, 183, 255, 0.945);
-      font-weight: bold;
-    }
-    
-    .download-info {
-      font-size:1.5rem;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-    
-    .download-info span {
-      display: block;
-      margin-bottom: 10px;
-    }
-    
-    .download-button {
-      padding: 15px 30px;
-      background:linear-gradient(180deg, #15F5BA, #0066ff);;
-      border: none;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: bold;
-      width: 100%;
-      transition: background 0.3s ease;
-    }
-    
-    .download-button:hover {
-      background:linear-gradient(90deg, #15F5BA, #0066ff);;
-    }
-    
-    /* System requirements box */
-    .requirements-box {
-      flex: 2;
-      background-color: #00000076;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 6px rgba(21, 245, 186, 0.8), 0 0 6px rgba(0, 102, 255, 0.8); /* Glowing effect */
-      color: #ccc;
-    }
-    
-    .requirements-box h2{
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      padding: 10px;
-      color:#000000;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 5px;
-      background:linear-gradient(180deg, #15F5BA, #0066ff);;
-    
-    }
-    
-    .requirements-box ul li {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-    }
-    
-    .requirements-box ul ul {
-      margin-top: 10px;
-      margin-left: 20px;
-    }
-    .requirements-box .bb{
-      color:#00c6ff;
-    }
-    
-    .requirements-box p {
-      font-size: 0.9rem;
-      color: #999;
-    }
-    
-    /* Adding the Windows icon */
-    .download-box .windows-icon {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    
-    @media (max-width: 768px) {
-      .download-box h2, .requirements-box h2 {
-          font-size: 1.5rem;
-      }
-    
-      .download-info {
-          font-size: 1rem;
-      }
-    
-      .requirements-box ul li {
-          font-size: 1rem;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .sixth-section h1 {
-          font-size: 1.8rem;
-      }
-    
-      .download-box h2, .requirements-box h2 {
-          font-size: 1.3rem;
-      }
-    
-      .download-info {
-          font-size: 0.9rem;
-      }
-    
-      .requirements-box ul li {
-          font-size: 0.9rem;
-      }
-    
-      .download-button {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-      }
-    }
+.chooseus_section .chooseus_content h6 {
+  color: var(--e-global-color-secondary); /* Bright Purple */
+  letter-spacing: 1.6px;
+  font-weight: 600; /* Increased weight for emphasis */
+  text-align: center; /* Centered heading */
+}
 
-    .windows-icon {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-      }
-    
-    .windows-icon i {
-      font-size: 60px;
-      color: #00bfff;
-      margin-bottom: 20px;
-      animation: float 4s ease-in-out infinite;
-    }
-    
-    .download-box{
-      text-align: center;
-    }
-    }
+.chooseus_section .chooseus_content h2 {
+  margin-bottom: 30px;
+  color: var(--e-global-color-white); /* White */
+  text-align: center; /* Centered heading */
+  font-size: 2rem; /* Larger font size */
+}
+
+.chooseus_section .nav-tabs {
+  border-bottom: 0px solid var(--e-global-color-white); /* White */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.chooseus_section .nav-tabs::after {
+  content: "";
+  width: 88%;
+  height: 3px; /* Thicker line */
+  background-color: var(--e-global-color-accent); /* Cyan */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.chooseus_section .nav-tabs li {
+  margin: 0 20px;
+}
+
+.chooseus_section .tabs-box .nav-tabs li a {
+  display: inline-block;
+  color: var(--e-global-color-text); /* Light Gray */
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 14px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.chooseus_section .tabs-box .nav-tabs li a:hover {
+  color: var(--e-global-color-secondary); /* Bright Purple */
+  border-bottom: 2px solid var(--e-global-color-accent); /* Cyan */
+}
+
+.chooseus_section .tabs-box .nav-tabs li a.active {
+  color: var(--e-global-color-secondary); /* Bright Purple */
+  border-bottom: 2px solid var(--e-global-color-accent); /* Cyan */
+  z-index: 1;
+}
+
+.chooseus_section .tabs-box .tab-content .chooseus_content_wrapper h4 {
+  color: var(--e-global-color-white); /* White */
+}
+
+.chooseus_section .tabs-box .tab-content .chooseus_content_wrapper p {
+  color: var(--e-global-color-text); /* Light Gray */
+  margin-bottom: 20px;
+  padding-right: 40px;
+  line-height: 1.6; /* Increased line height for better readability */
+}
+
+.chooseus_section .chooseus_content .chooseus_content_wrapper ul {
+  display: inline-block;
+}
+
+.chooseus_section .chooseus_content .chooseus_content_wrapper .second_list {
+  padding-left: 15px;
+}
+
+.chooseus_section .chooseus_content .chooseus_content_wrapper ul li {
+  position: relative;
+  margin-bottom: 8px;
+  transition: all 0.3s ease-in-out;
+  color:#dedede;
+}
+
+.chooseus_section .chooseus_content .chooseus_content_wrapper ul li i {
+  border-radius: 100px;
+  height: 30px; /* Slightly larger */
+  width: 30px; /* Slightly larger */
+  line-height: 30px; /* Center text */
+  font-size: 14px; /* Slightly larger font */
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--e-global-color-pale-blue); /* Pale Blue */
+  color: var(--e-global-color-secondary); /* Bright Purple */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chooseus_section .chooseus_content .tabs-box .tab-content .chooseus_content_wrapper ul li p {
+  color: var(--e-global-color-white); /* White */
+  padding-left: 40px;
+  margin: 0;
+}
+
+.chooseus_section .btn_wrapper {
+  display: flex;
+  margin-left: 150px;
+  margin-top: 30px; /* Adjust this if needed */
+}
+
+.chooseus_section .default-btn {
+  display: inline-block;
+  padding: 15px 40px; /* Larger padding for a bigger button */
+  background-color: var(--e-global-color-secondary); /* Bright Purple */
+  color: var(--e-global-color-white); /* White text */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center; /* Center text */
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: all 0.4s ease; /* Smooth transition effect */
+  position: relative;
+  overflow: hidden;
+}
+
+.chooseus_section .default-btn:hover {
+
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.chooseus_section .default-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle white overlay */
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.chooseus_section .default-btn:hover::before {
+  opacity: 1;
+}
+
+.chooseus_section .default-btn:hover {
+  color: var(--e-global-color-white); /* Keep text white */
+}
+
+.chooseus_section .default-btn i {
+  margin-right: 8px; /* Add space if you want to add an icon */
+  font-size: 16px;
+}
+
+.chooseus_section .chooseus_image_wrapper .chooseus_image {
+  z-index: 1;
+  width: 100%; /* Full width of its container */
+  height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+  max-width: 400px; /* Max width to prevent overflow on larger screens */
+}
+
+
+.chooseus_section .chooseus_image_wrapper .chooseus_shape {
+  top: -40px;
+  right: -40px;
+  }

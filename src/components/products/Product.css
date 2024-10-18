@@ -42,14 +42,14 @@
 }
 
 .first-section .text {
-  flex: 3;
+  flex: 4;
   text-align: justify;
 }
 
 .first-section .desc,
 .scanners {
   font-size: 1.4rem;
-  line-height: 1.6;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);
 }
 

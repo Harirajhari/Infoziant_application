@@ -20,7 +20,7 @@ const Product = () => {
   return (
     <>
       <div className="product-page">
-        <section className="first-section">
+      <section className="first-section">
           <h1>Infoziant DAST: Elevating Your Web Application Security</h1>
           <div className='contain'>
             <div className='text'>
@@ -31,16 +31,6 @@ const Product = () => {
                 technology, this tool provides comprehensive security evaluations
                 through automated and manual testing, ensuring your web assets remain
                 resilient against evolving cyber threats.
-              </p>
-              <p className='scanners'>
-                Infoziant DAST includes two specialized vulnerability scanners
-                <ul>
-                  <li>Safeguard web applications with real-time vulnerability detection.</li>
-                  <li>Leverages advanced automated and manual testing for thorough security checks.</li>
-                  <li>Ensures resilience against evolving cyber threats.</li>
-                  <li>Identify and fix vulnerabilities before attackers can exploit them.</li>
-                  <li>Combines the best of both worlds for a robust security evaluation.</li>
-                </ul>
               </p>
             </div>
             <div className="product-image-container">
