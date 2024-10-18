@@ -31,7 +31,7 @@ const CardSlider = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 200,
         slidesToShow: 3,  // Show 3 cards at once, you can change it
         slidesToScroll: 1,
         autoplay: true,
@@ -61,7 +61,7 @@ const SampleNextArrow = (props) => {
     return (
         <div
             className={className}
-            style={{ ...style, display: 'block', background: 'black', borderRadius: '50%' }}
+            style={{ ...style, display: 'block', background: '', borderRadius: '50%' }}
             onClick={onClick}
         />
     );

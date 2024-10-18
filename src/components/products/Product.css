@@ -1,75 +1,27 @@
-/* src/components/Product.css */
-/* Product.css */
 
-/* Importing the font */
 @import url('https://fonts.googleapis.com/css2?family=Mark+Pro:wght@400;700&display=swap');
 
-/* Applying the font to the body or specific elements */
-body {
+
+.product-page{
   background: url('../../assests/images/info-bg.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-
-/* Common styles for all sections */
-.section {
-  /* Each section takes up at least 100% of the viewport height */
-  padding: 50px;
-  min-height: 100vh;
-  font-family: Poppins, sans-serif;
-
-}
-
-/* Odd sections (1st, 3rd, 5th) */
-.section:nth-child(odd) {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.195), rgba(0, 0, 0, 0.195));
-}
-
-/* Even sections (2nd, 4th) */
-.section:nth-child(even) {
-  background: linear-gradient(180deg, rgba(80, 80, 80, 0.195), rgba(103, 103, 103, 0.179));
-}
-
-/* Common styles for all section headings */
-
-.second-section h1,
-.sixth-section h1,
-.fifth-section h1 ,
-.sixth-section h1{
-  font-size: 2.5rem;
-  /* Adjust font sizes */
-  font-weight: bold;
-  /* Make the text bold */
-  background: linear-gradient(0deg, #15F5BA, #0066ff);
-  /* Apply the gradient background */
-  -webkit-background-clip: text;
-  /* Clip the background to the text (Safari/Chrome) */
-  -webkit-text-fill-color: transparent;
-  /* Make the text color transparent to show the gradient */
-  background-clip: text;
-  /* For Firefox */
-  text-align: center;
-  text-shadow: 0 0 10px rgba(21, 245, 185, 0.17), 0 0 12px rgba(0, 102, 255, 0.482);
-  margin-bottom: 40px;
-  /* Center the text */
-
-  /* Glowing effect */
-
-}
-
-
 /* Section styling */
 .first-section {
-  background: linear-gradient(90deg, #15F5BA, #0066ff);
-  padding: 70px;
+ background-color: #000000;
+  padding: 100px;
   text-align: left;
   position: relative;
-  margin-top: 10vh;
   min-height: 90vh;
 }
 
-.first-section h1 {
+.first-section h1,
+.second-section h1,
+.sixth-section h1,
+.fifth-section h1,
+.slider-section h1 {
   font-size: 2.5rem;
   font-weight: bold;
   background: linear-gradient(0deg, #15F5BA, #0066ff);
@@ -214,9 +166,9 @@ body {
 
   .first-section h1,
   .second-section h1,
-.sixth-section h1,
-.fifth-section h1,
-.sixth-section h1{
+  .fifth-section h1,
+  .sixth-section h1,
+  .slider-section h1{
     font-size: 1.2rem;
   }
 
@@ -238,9 +190,9 @@ body {
 @media (max-width: 480px) {
   .first-section h1,
   .second-section h1,
-.sixth-section h1,
-.fifth-section h1,
-.sixth-section h1{
+  .fifth-section h1,
+  .sixth-section h1,
+  .slider-section h1{
     font-size: 1.3rem;
   }
   .first-section{
@@ -283,30 +235,13 @@ body {
   }
 }
 
-/* Apply the animation */
-.first-section .text,
-.first-section h1,
-.first-section .desc,
-.first-section .scanners {
-  opacity: 0;
-  /* Start with the text invisible */
-  transition: opacity 0.5s ease-out;
-  /* Ensure smooth fading */
-}
 
-/* When the section is in view, the elements fade in */
-.in-view .text,
-.in-view h1,
-.in-view .desc,
-.in-view .scanners {
-  opacity: 1;
-  animation: fadeIn 2s ease-out;
-}
+/*END OF THE FIRST SECTION*/
 
 /*secong section start*/
 
 .product-page .second-section {
-  background: url('../../assests/images/info-bg.jpg') no-repeat center center;
+  padding: 100px;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -432,284 +367,3 @@ body {
   }
 }
 
-
-
-.fifth-section .comparison-table {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-  padding: 40px 0;
-  margin: 0 auto;
-}
-
-.fifth-section .comparison-column {
-  border-radius: 15px;
-  padding: 30px;
-  min-width: 30%; 
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fifth-section .comparison-column:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-.fifth-section .comparison-column h2 {
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 25px;
-  color: #ffffff;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.fifth-section .free-icon {
-  color: #4CAF50; /* Green for Free */
-  margin-right: 10px;
-  animation: bounce 2s infinite; /* Bounce animation for the icon */
-}
-
-.fifth-section .premium-icon {
-  color: #FFB300; /* Golden for Premium */
-  margin-right: 10px;
-  animation: pulse 2s infinite; /* Pulse animation for the icon */
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.fifth-section .comparison-column ul {
-  list-style-type: none;
-  padding: 0;
-  color: #ffffff;
-  font-size: 18px;
-}
-
-.fifth-section .comparison-column ul li {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  font-family: 'Jost', sans-serif;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.fifth-section .comparison-column ul li:hover {
-  color: #57eef1; /* Hover effect on list items */
-}
-
-.fifth-section .comparison-column ul li span {
-  margin-right: 12px;
-  font-size: 24px;
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .fifth-section .comparison-table {
-    flex-direction: column;
-    gap: 30px;
-    padding: 4%;
-  }
-
-  .fifth-section .comparison-column {
-    min-width: 100%;
-  }
-}
-
-
-.section.sixth-section{
-/* General styling for the section */
-.section.sixth-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 0%;
-  padding: 60px;
-}
-
-/* Container for download details */
-.download-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin-left: 165px;
-}
-
-.checkmark {
-  color: green; /* Green for checkmarks */
-}
-
-.crossmark {
-  color: red; /* Red for crossmarks */
-}
-
-
-/* Styling for the download box */
-.download-box {
-  flex: 2;
-  background-color: #00000082;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 6px rgba(21, 245, 186, 0.8), 0 0 6px rgba(0, 102, 255, 0.8); /* Glowing effect */
-  text-align: center;
-}
-
-.download-box h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: rgba(0, 183, 255, 0.945);
-  font-weight: bold;
-}
-
-.download-info {
-  font-size:1.5rem;
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-.download-info span {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.download-button {
-  padding: 15px 30px;
-  background:linear-gradient(180deg, #15F5BA, #0066ff);;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  width: 100%;
-  transition: background 0.3s ease;
-}
-
-.download-button:hover {
-  background:linear-gradient(90deg, #15F5BA, #0066ff);;
-}
-
-/* System requirements box */
-.requirements-box {
-  flex: 2;
-  background-color: #00000076;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 6px rgba(21, 245, 186, 0.8), 0 0 6px rgba(0, 102, 255, 0.8); /* Glowing effect */
-  color: #ccc;
-}
-
-.requirements-box h2{
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  padding: 10px;
-  color:#000000;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 5px;
-  background:linear-gradient(180deg, #15F5BA, #0066ff);;
-
-}
-
-.requirements-box ul li {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-.requirements-box ul ul {
-  margin-top: 10px;
-  margin-left: 20px;
-}
-.requirements-box .bb{
-  color:#00c6ff;
-}
-
-.requirements-box p {
-  font-size: 0.9rem;
-  color: #999;
-}
-
-/* Adding the Windows icon */
-.download-box .windows-icon {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .download-box h2, .requirements-box h2 {
-      font-size: 1.5rem;
-  }
-
-  .download-info {
-      font-size: 1rem;
-  }
-
-  .requirements-box ul li {
-      font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .sixth-section h1 {
-      font-size: 1.8rem;
-  }
-
-  .download-box h2, .requirements-box h2 {
-      font-size: 1.3rem;
-  }
-
-  .download-info {
-      font-size: 0.9rem;
-  }
-
-  .requirements-box ul li {
-      font-size: 0.9rem;
-  }
-
-  .download-button {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-  }
-}
-
-.windows-icon i {
-  font-size: 50px;
-  color: #00bfff;
-  margin-bottom: 20px;
-  animation: float 4s ease-in-out infinite;
-}
-
-.download-box{
-  text-align: center;
-}
-}

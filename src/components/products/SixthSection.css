@@ -1,0 +1,184 @@
+.section{
+    background-color: #000000;
+    text-align: center;
+    padding: 50px;
+}
+
+
+.section.sixth-section{
+    /* General styling for the section */
+    .section.sixth-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0%;
+      padding: 60px;
+    }
+    
+    /* Container for download details */
+    .download-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin-left: 165px;
+    }
+    
+    .checkmark {
+        color: green; /* Green for checkmarks */
+    }
+    
+    .crossmark {
+        color: red; /* Red for crossmarks */
+    }
+    
+    
+    /* Styling for the download box */
+    .download-box {
+      flex: 2;
+      background-color: #00000082;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(21, 245, 186, 0.8), 0 0 6px rgba(0, 102, 255, 0.8); /* Glowing effect */
+      text-align: center;
+    }
+    
+    .download-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: rgba(0, 183, 255, 0.945);
+      font-weight: bold;
+    }
+    
+    .download-info {
+      font-size:1.5rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    
+    .download-info span {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .download-button {
+      padding: 15px 30px;
+      background:linear-gradient(180deg, #15F5BA, #0066ff);;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+    
+    .download-button:hover {
+      background:linear-gradient(90deg, #15F5BA, #0066ff);;
+    }
+    
+    /* System requirements box */
+    .requirements-box {
+      flex: 2;
+      background-color: #00000076;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(21, 245, 186, 0.8), 0 0 6px rgba(0, 102, 255, 0.8); /* Glowing effect */
+      color: #ccc;
+    }
+    
+    .requirements-box h2{
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      padding: 10px;
+      color:#000000;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5px;
+      background:linear-gradient(180deg, #15F5BA, #0066ff);;
+    
+    }
+    
+    .requirements-box ul li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    
+    .requirements-box ul ul {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    .requirements-box .bb{
+      color:#00c6ff;
+    }
+    
+    .requirements-box p {
+      font-size: 0.9rem;
+      color: #999;
+    }
+    
+    /* Adding the Windows icon */
+    .download-box .windows-icon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .download-box h2, .requirements-box h2 {
+          font-size: 1.5rem;
+      }
+    
+      .download-info {
+          font-size: 1rem;
+      }
+    
+      .requirements-box ul li {
+          font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .sixth-section h1 {
+          font-size: 1.8rem;
+      }
+    
+      .download-box h2, .requirements-box h2 {
+          font-size: 1.3rem;
+      }
+    
+      .download-info {
+          font-size: 0.9rem;
+      }
+    
+      .requirements-box ul li {
+          font-size: 0.9rem;
+      }
+    
+      .download-button {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+      }
+    }
+
+    .windows-icon {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
+    
+    .windows-icon i {
+      font-size: 60px;
+      color: #00bfff;
+      margin-bottom: 20px;
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .download-box{
+      text-align: center;
+    }
+    }
