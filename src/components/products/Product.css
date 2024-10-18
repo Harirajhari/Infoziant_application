@@ -34,7 +34,6 @@ body {
 /* Common styles for all section headings */
 
 .second-section h1,
-.third-section h1,
 .sixth-section h1,
 .fifth-section h1 ,
 .sixth-section h1{
@@ -215,7 +214,6 @@ body {
 
   .first-section h1,
   .second-section h1,
-.third-section h1,
 .sixth-section h1,
 .fifth-section h1,
 .sixth-section h1{
@@ -240,7 +238,6 @@ body {
 @media (max-width: 480px) {
   .first-section h1,
   .second-section h1,
-.third-section h1,
 .sixth-section h1,
 .fifth-section h1,
 .sixth-section h1{
@@ -435,126 +432,6 @@ body {
   }
 }
 
-/* Style for section 2 (cards) */
-/* Style for section 2 (cards) */
-/* Style for section 2 (cards) */
-/* Style for section 2 (cards) */
-.third-section {
-  text-align: center;
-  padding: 50px;
-}
-
-.third-section .wrapper {
-  padding: 5%;
-}
-
-.third-section .cols {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
-  grid-gap: 30px; /* Space between cards */
-  justify-content: center;
-}
-
-.third-section .container {
-  width: 100%; /* Make card width responsive */
-  height: 150px; /* Set height for cards */
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  perspective: 1000px; /* Perspective to help with 3D effect */
-}
-
-.third-section .container:hover {
-  transform: rotateY(180deg);
-  margin-left: 25px; /* Flip card on hover */
-}
-
-.third-section .front,
-.third-section .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 0 6px rgba(21, 245, 186, 0.8), 0 0 6px rgba(0, 102, 255, 0.8); /* Glowing effect */
-  transition: box-shadow 0.5s ease;
-}
-
-.third-section .front {
-  background-color: #00000084;
-  color: white;
-}
-
-.third-section .container:hover .front,
-.third-section .container:hover .back {
-  box-shadow: 0 0 20px rgba(21, 245, 186, 0.8), 0 0 20px rgba(0, 102, 255, 0.8);
-  border: #15F5BA solid; /* Glowing effect */
-}
-
-/* Ensure cards flip smoothly and only one side is visible at a time */
-.third-section .container .back {
-  transform: rotateY(180deg);
-  background-color: rgba(0, 102, 255, 0.479);
-  color: white;
-  font-weight: bold;
-  padding: 5px; /* Back will flip in place */
-}
-
-.third-section .inner {
-  text-align: center;
-  font-size: 1rem;
-  padding: 10px;
-}
-
-.third-section .back .inner {
-  font-size: 0.8rem;
-}
-
-.third-section .inner svg {
-  margin-bottom: 10px; /* Space between the icon and the text */
-  color: rgba(0, 208, 255, 0.8); /* Adjust the icon color as per your design */
-}
-
-/* Responsive styles */
-@media (max-width: 1024px) { /* Tablet */
-  .third-section .cols {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  }
-  
-  .third-section .inner {
-    font-size: 0.9rem; /* Adjust font size */
-  }
-}
-
-@media (max-width: 768px) { /* Mobile */
-  .third-section .cols {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  }
-
-
-  .third-section {
-    padding: 30px; /* Adjust padding */
-  }
-}
-
-@media (max-width: 480px) { /* Smaller Mobile */
-  .third-section .cols {
-    grid-template-columns: 1fr; /* 1 column */
-  }
-
-
-  .third-section h1 {
-    font-size: 1.2rem;
-  }
-
-  .third-section {
-    padding: 20px; /* Adjust padding */
-  }
-}
-
 
 
 .fifth-section .comparison-table {
@@ -665,14 +542,14 @@ body {
 }
 
 
-
+.section.sixth-section{
 /* General styling for the section */
 .section.sixth-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 0%;
   padding: 60px;
-
 }
 
 /* Container for download details */
@@ -684,7 +561,17 @@ body {
   padding: 20px;
   width: 100%;
   max-width: 1200px;
+  margin-left: 165px;
 }
+
+.checkmark {
+  color: green; /* Green for checkmarks */
+}
+
+.crossmark {
+  color: red; /* Red for crossmarks */
+}
+
 
 /* Styling for the download box */
 .download-box {
@@ -824,4 +711,5 @@ body {
 
 .download-box{
   text-align: center;
+}
 }
