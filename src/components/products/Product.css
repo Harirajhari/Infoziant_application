@@ -35,7 +35,7 @@ body {
 
 .second-section h1,
 .third-section h1,
-.fourth-section h1,
+.sixth-section h1,
 .fifth-section h1 ,
 .sixth-section h1{
   font-size: 2.5rem;
@@ -216,7 +216,7 @@ body {
   .first-section h1,
   .second-section h1,
 .third-section h1,
-.fourth-section h1,
+.sixth-section h1,
 .fifth-section h1,
 .sixth-section h1{
     font-size: 1.2rem;
@@ -241,7 +241,7 @@ body {
   .first-section h1,
   .second-section h1,
 .third-section h1,
-.fourth-section h1,
+.sixth-section h1,
 .fifth-section h1,
 .sixth-section h1{
     font-size: 1.3rem;
@@ -308,27 +308,154 @@ body {
 
 /*secong section start*/
 
+.product-page .second-section {
+  background: url('../../assests/images/info-bg.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-page .second-section .you-tube-video {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.product-page .second-section .video-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.product-page .second-section .video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.product-page .second-section .thumbnail-image {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(21, 245, 186, 0.8), 0 0 10px rgba(0, 102, 255, 0.8);
+  border-radius: 10px;
+}
+
+.product-page .second-section .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-page .second-section .play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.product-page .second-section .play-icon {
+  font-size: 60px;
+}
+
+@media (max-width: 768px) {
+  .product-page .second-section .play-button {
+      width: 60px;
+      height: 60px;
+  }
+  .product-page .second-section .play-button svg {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-page .second-section .play-button {
+      width: 50px;
+      height: 50px;
+  }
+  .product-page .second-section .play-button svg {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+.product-page .video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.product-page .video-container iframe {
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  border: none;
+}
+
+.product-page .video-container .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.product-page .video-container .close-button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .product-page .video-container iframe {
+      width: 90%;
+      height: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-page .video-container iframe {
+      width: 95%;
+      height: 95%;
+  }
+}
+
 /* Style for section 2 (cards) */
 /* Style for section 2 (cards) */
 /* Style for section 2 (cards) */
 /* Style for section 2 (cards) */
-.second-section {
+.third-section {
   text-align: center;
   padding: 50px;
 }
 
-.second-section .wrapper {
+.third-section .wrapper {
   padding: 5%;
 }
 
-.second-section .cols {
+.third-section .cols {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columns */
   grid-gap: 30px; /* Space between cards */
   justify-content: center;
 }
 
-.second-section .container {
+.third-section .container {
   width: 100%; /* Make card width responsive */
   height: 150px; /* Set height for cards */
   position: relative;
@@ -337,13 +464,13 @@ body {
   perspective: 1000px; /* Perspective to help with 3D effect */
 }
 
-.second-section .container:hover {
+.third-section .container:hover {
   transform: rotateY(180deg);
   margin-left: 25px; /* Flip card on hover */
 }
 
-.second-section .front,
-.second-section .back {
+.third-section .front,
+.third-section .back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -356,19 +483,19 @@ body {
   transition: box-shadow 0.5s ease;
 }
 
-.second-section .front {
+.third-section .front {
   background-color: #00000084;
   color: white;
 }
 
-.second-section .container:hover .front,
-.second-section .container:hover .back {
+.third-section .container:hover .front,
+.third-section .container:hover .back {
   box-shadow: 0 0 20px rgba(21, 245, 186, 0.8), 0 0 20px rgba(0, 102, 255, 0.8);
   border: #15F5BA solid; /* Glowing effect */
 }
 
 /* Ensure cards flip smoothly and only one side is visible at a time */
-.second-section .container .back {
+.third-section .container .back {
   transform: rotateY(180deg);
   background-color: rgba(0, 102, 255, 0.479);
   color: white;
@@ -376,60 +503,171 @@ body {
   padding: 5px; /* Back will flip in place */
 }
 
-.second-section .inner {
+.third-section .inner {
   text-align: center;
   font-size: 1rem;
   padding: 10px;
 }
 
-.second-section .back .inner {
+.third-section .back .inner {
   font-size: 0.8rem;
 }
 
-.second-section .inner svg {
+.third-section .inner svg {
   margin-bottom: 10px; /* Space between the icon and the text */
   color: rgba(0, 208, 255, 0.8); /* Adjust the icon color as per your design */
 }
 
 /* Responsive styles */
 @media (max-width: 1024px) { /* Tablet */
-  .second-section .cols {
+  .third-section .cols {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
   }
   
-  .second-section .inner {
+  .third-section .inner {
     font-size: 0.9rem; /* Adjust font size */
   }
 }
 
 @media (max-width: 768px) { /* Mobile */
-  .second-section .cols {
+  .third-section .cols {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
   }
 
 
-  .second-section {
+  .third-section {
     padding: 30px; /* Adjust padding */
   }
 }
 
 @media (max-width: 480px) { /* Smaller Mobile */
-  .second-section .cols {
+  .third-section .cols {
     grid-template-columns: 1fr; /* 1 column */
   }
 
 
-  .second-section h1 {
+  .third-section h1 {
     font-size: 1.2rem;
   }
 
-  .second-section {
+  .third-section {
     padding: 20px; /* Adjust padding */
   }
 }
 
+
+
+.fifth-section .comparison-table {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+
+.fifth-section .comparison-column {
+  border-radius: 15px;
+  padding: 30px;
+  min-width: 30%; 
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fifth-section .comparison-column:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.fifth-section .comparison-column h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.fifth-section .free-icon {
+  color: #4CAF50; /* Green for Free */
+  margin-right: 10px;
+  animation: bounce 2s infinite; /* Bounce animation for the icon */
+}
+
+.fifth-section .premium-icon {
+  color: #FFB300; /* Golden for Premium */
+  margin-right: 10px;
+  animation: pulse 2s infinite; /* Pulse animation for the icon */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fifth-section .comparison-column ul {
+  list-style-type: none;
+  padding: 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.fifth-section .comparison-column ul li {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.fifth-section .comparison-column ul li:hover {
+  color: #57eef1; /* Hover effect on list items */
+}
+
+.fifth-section .comparison-column ul li span {
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .fifth-section .comparison-table {
+    flex-direction: column;
+    gap: 30px;
+    padding: 4%;
+  }
+
+  .fifth-section .comparison-column {
+    min-width: 100%;
+  }
+}
+
+
+
 /* General styling for the section */
-.section.fourth-section {
+.section.sixth-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -555,7 +793,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .fourth-section h1 {
+  .sixth-section h1 {
       font-size: 1.8rem;
   }
 
@@ -577,110 +815,13 @@ body {
   }
 }
 
-
-.fifth-section .comparison-table {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-  padding: 40px 0;
-  margin: 0 auto;
+.windows-icon i {
+  font-size: 50px;
+  color: #00bfff;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
 }
 
-.fifth-section .comparison-column {
-  border-radius: 15px;
-  padding: 30px;
-  min-width: 30%; 
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fifth-section .comparison-column:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-.fifth-section .comparison-column h2 {
-  font-size: 32px;
+.download-box{
   text-align: center;
-  margin-bottom: 25px;
-  color: #ffffff;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.fifth-section .free-icon {
-  color: #4CAF50; /* Green for Free */
-  margin-right: 10px;
-  animation: bounce 2s infinite; /* Bounce animation for the icon */
-}
-
-.fifth-section .premium-icon {
-  color: #FFB300; /* Golden for Premium */
-  margin-right: 10px;
-  animation: pulse 2s infinite; /* Pulse animation for the icon */
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.fifth-section .comparison-column ul {
-  list-style-type: none;
-  padding: 0;
-  color: #ffffff;
-  font-size: 18px;
-}
-
-.fifth-section .comparison-column ul li {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  font-family: 'Jost', sans-serif;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.fifth-section .comparison-column ul li:hover {
-  color: #57eef1; /* Hover effect on list items */
-}
-
-.fifth-section .comparison-column ul li span {
-  margin-right: 12px;
-  font-size: 24px;
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .fifth-section .comparison-table {
-    flex-direction: column;
-    gap: 30px;
-    padding: 4%;
-  }
-
-  .fifth-section .comparison-column {
-    min-width: 100%;
-  }
 }
